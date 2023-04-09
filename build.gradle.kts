@@ -1,10 +1,12 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-	id("org.springframework.boot") version "3.0.5"
+//	id("org.springframework.boot") version "3.0.5"
+	id("org.springframework.boot") version "2.7.10"
 	id("io.spring.dependency-management") version "1.1.0"
 	kotlin("jvm") version "1.7.22"
 	kotlin("plugin.spring") version "1.7.22"
+	id("org.springdoc.openapi-gradle-plugin") version "1.6.0"
 }
 
 group = "com.example"
@@ -19,6 +21,8 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
+	implementation("org.springdoc:springdoc-openapi-ui:1.7.0")
+//	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
